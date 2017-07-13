@@ -69,7 +69,11 @@
 }
 
 #background-color {
-	background-color: #e1bee7;
+	background: #e1bee7;
+	background: -webkit-linear-gradient(#e1bee7, #f8bbd0, #ffccbc);
+	background: -o-linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+	background: -moz-linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+	background: linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
 ;
 }
 
