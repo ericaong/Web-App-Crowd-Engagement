@@ -9,7 +9,6 @@ $(function() {
 	// 			$('#dwell-h3').html(response.value[0].result);
 	// 	});
 	// });
-	
 	let ctx1 = $("#chart-satisfaction");
 
 	let myChart1 = new Chart(ctx1, {
@@ -41,8 +40,40 @@ $(function() {
 	        }
 	    }
 	});
-
 	
+	let ctx2 = $("#chart-motion");
+
+	let myChart2 = new Chart(ctx2, {
+		type: 'line',
+		data: {
+			labels: [],
+			datasets: [{
+				data: [0, 1],
+				backgroundColor: 'rgba(0, 0, 0, 0)',
+				borderColor: 'rgba(54, 162, 235, 1)',
+				borderWidth: 1
+			}]
+		},
+		options: {
+			showLines: true,
+			elements: {
+				line: {
+					tension: 0
+				}
+			}
+		}
+	});
+	
+	setInterval(function() {
+		$.get(BASE_URL + '/Datastreams(990584)/Observations' 
+			+ '?' + '$orderby=phenomenonTime' + '&'
+			+ '$select=result, phenomenonTime', function(response, status) {
+				let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
+				addData(myChart2, time, response.value[0].result);
+				myChart2.update()
+		});
+	}, 3000);
+
 	function addData(chart, label, data) {
 	    chart.data.labels.push(label);
 	    chart.data.datasets.forEach((dataset) => {
