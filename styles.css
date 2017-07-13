@@ -1,0 +1,113 @@
+#event-h1 {
+
+}
+
+#block {
+	/*border-radius: 25px;
+	border: 3px solid black;*/
+	padding: 50px;
+}
+
+#satisfaction-h1 {
+	
+}
+
+#interaction-h1 {
+	
+}
+
+#overall-h1 {
+	margin-top: 70px;
+}
+
+#dwell-h1 {
+}
+
+#number-h1 {
+	
+}
+
+#customer-h1 {
+	
+}
+
+@media (min-width: 860px) {
+   .collapse {
+       display: none !important;
+   }
+}
+
+#event-border {
+/*    border-radius: 25px;
+	border: 3px solid black;
+	padding: 10px;*/
+	padding: 14px;
+}
+
+#satisfaction-border {
+	/*border-radius: 25px;
+	border: 3px solid black;
+	padding: 10px;*/
+}
+
+#dwell-border {
+/*	border-radius: 25px;
+	border: 3px solid black;
+	padding: 10px;*/
+}
+
+#number-border {
+	/*border-radius: 25px;
+	border: 3px solid black;
+	padding: 10px;*/
+}
+
+#customer-border {
+	/*border-radius: 25px;
+	border: 3px solid black;
+	padding: 10px;*/
+}
+
+#background-color {
+	background-color: #e1bee7;
+;
+}
+
+
+
+#interaction-border {
+	/*border-radius: 25px;
+	border: 3px solid black;
+	padding: 10px;*/
+}
+
+.label {
+	background-color: #00e676;
+}
+
+.label-yellow {
+	background-color: #f0ff00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
