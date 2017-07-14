@@ -23,7 +23,7 @@
     			<span class="icon-bar"></span>
     			<span class="icon-bar"></span>
     		</button>
-      		<a class="navbar-brand" href="#">Crowd Engagement</a>
+      		<a class="navbar-brand" href="./index.html">Crowd Engagement</a>
     	</div>
     	<div class="collapse navbar-collapse" id="navibar">
 	    	<ul class="nav navbar-nav">
@@ -32,11 +32,11 @@
 		     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dashboards
 		       		<span class="caret"></span></a>
 		        	<ul class="dropdown-menu">
-		          		<li><a href="#rowa">Row 1</a></li>
-		          		<li><a href="#row1">Row 2</a></li>
-		          		<li><a href="#row2">Row 3</a></li>
-		          		<li><a href="#row3">Row 4</a></li>
-		          		<li><a href="#row4">Row 5</a></li>
+		          		<li><a href="#rowA">Satisfaction</a></li>
+		          		<li><a href="#rowB">Dwell Time</a></li>
+		          		<li><a href="#rowC">Number of People</a></li>
+		          		<li><a href="#rowD">Human Traffic</a></li>
+		          		<!-- <li><a href="#rowE">Interaction</a></li> -->
 		        	</ul>
 		    	</li>
 	      		<li class="dropdown">
@@ -46,44 +46,39 @@
 		          		<li><a href="./index2.html">All Charts</a></li>
 		        	</ul>
 		    	</li>
-	      		<li class="dropdown">
-		     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Tables
-		       		<span class="caret"></span></a>
-		        	<ul class="dropdown-menu">
-		          		<li><a href="#">All Tables</a></li>
-		        	</ul>
-		    	</li>
 	    	</ul>
-	    	<form class="navbar-form navbar-left">
+	    	<!-- <form class="navbar-form navbar-left">
 	    		<div class="input-group">
-	    			<input type="text" class="from-control" placeholder="Search">
+	    			<input type="text" id="search-bar" class="form-control" placeholder="Search">
 	    		</div>
-	    		<button class="btn btn-default" type="submit">
+	    		<button id="search-button" class="btn btn-default" type="submit">
 					<i class="glyphicon glyphicon-search"></i>
 	    		</button>
-	    	</form>
+	    	</form> -->
 
   	</div>
 </nav>
 	
 <div class="container-fluid">
-	<div class="row" id="row1">
-		<div class="panel panel-info col-xs-12 col-md-6">
+	<div class="row" id="rowA">
+		<div class="panel panel-info col-xs-12 col-md-12">
 			<h1 class="panel-heading">Satisfaction</h1>
 				<div id="display-satisfaction" class="panel-body">
 					<canvas id="chart-satisfaction" width="400" height="400" class="panel-body"></canvas>
 				</div>
 		</div>
-		<div class="panel panel-info col-xs-12 col-md-6">
+	</div>
+	<div class="row" id="rowB">
+		<div class="panel panel-info col-xs-12 col-md-12" id="dwell-panel">
 			<h1 class="panel-heading">Dwell Time</h1>
 			
-				<div id="display-dwell ajax-dwell" class="col-xs-12 col-md-6 panel-body">
+			<div id="display-dwell ajax-dwell" class="col-xs-12 col-md-6 panel-body">
 				<canvas id="chart-dwell" class="panel-body" width="400" height="400"></canvas>
 			</div>
 		</div>
 	</div>	
-	<div class="row" id="row2">
-		<div class="col-xs-12 col-md-6 panel panel-info">
+	<div class="row" id="rowC">	
+		<div class="col-xs-12 col-md-12 panel panel-info">
 			<h1 id="number-h1" class="panel-heading">Number of People</h1>
 			<h2 class="panel-body">Footfall Count:</h2>
 			<h3 id="footfall-h3" class="panel-body">185</h3>
@@ -91,7 +86,9 @@
 					<canvas id="chart-peoplenum" class="panel-body" width="400" height="400"></canvas>
 				</div>
 		</div>
-		<div class="col-xs-12 col-md-6 panel panel-info">
+	</div>
+	<div class="row" id="rowD">
+		<div class="col-xs-12 col-md-12 panel panel-info">
 			<h1 class="panel-heading">Human Traffic</h1>
 				<div id="display-motion" class="panel panel-info col-xs-12 col-md-6">
 					<canvas id="chart-motion" class="panel-body" width="400" height="400"></canvas>
@@ -100,13 +97,14 @@
 				<h4 class="panel-body">Motion Absent = 0</h4>
 			</div>
 	</div>
-	<div class="row" id="row3">	
+	<!-- <div class="row" id="rowE"></div>
 		<div class="col-xs-12 col-md-12 panel panel-info">
 			<h1 class="panel-heading">Interaction</h1>
-			<div id="display-sound" class="col-xs-12">
+			<div id="display-sound">
 				<canvas id="chart-sound" class="panel-body" width="400" height="400"></canvas>
 			</div>
 		</div>
+	</div> -->
 </div>
 
 

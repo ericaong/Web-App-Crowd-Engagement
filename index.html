@@ -24,7 +24,7 @@
     			<span class="icon-bar"></span>
     			<span class="icon-bar"></span>
     		</button>
-      		<a class="navbar-brand" href="#">Crowd Engagement</a>
+      		<a class="navbar-brand" href="./index.html">Crowd Engagement</a>
     	</div>
     	<div class="collapse navbar-collapse" id="navibar">
 	    	<ul class="nav navbar-nav">
@@ -33,11 +33,10 @@
 		     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dashboards
 		       		<span class="caret"></span></a>
 		        	<ul class="dropdown-menu">
-		          		<li><a href="#rowa">Row 1</a></li>
-		          		<li><a href="#row1">Row 2</a></li>
-		          		<li><a href="#row2">Row 3</a></li>
-		          		<li><a href="#row3">Row 4</a></li>
-		          		<li><a href="#row4">Row 5</a></li>
+		          		<li><a href="#row2">Event 1 and Dwell Time</a></li>
+		          		<li><a href="#row3">Satisfaction</a></li>
+		          		<li><a href="#row4">Number of People</a></li>
+		          		<li><a href="#row5">Human Traffic</a></li>
 		        	</ul>
 		    	</li>
 	      		<li class="dropdown">
@@ -47,22 +46,15 @@
 		          		<li><a href="./index2.html">All Charts</a></li>
 		        	</ul>
 		    	</li>
-	      		<li class="dropdown">
-		     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Tables
-		       		<span class="caret"></span></a>
-		        	<ul class="dropdown-menu">
-		          		<li><a href="#">All Tables</a></li>
-		        	</ul>
-		    	</li>
 	    	</ul>
-	    	<form class="navbar-form navbar-left">
+	    	<!-- <form class="navbar-form navbar-left">
 	    		<div class="input-group">
-	    			<input type="text" class="from-control" placeholder="Search">
+	    			<input type="text" id="search-bar" class="form-control" placeholder="Search">
 	    		</div>
-	    		<button class="btn btn-default" type="submit">
+	    		<button id="search-button" class="btn btn-default" type="submit">
 					<i class="glyphicon glyphicon-search"></i>
 	    		</button>
-	    	</form>
+	    	</form> -->
 
   	</div>
 </nav>
@@ -129,14 +121,14 @@
 
 
 <div class="container-fluid">
-	<div id="rowA" class="row">
+	<div id="row1" class="row">
 		<div class="panel panel-info">
 			<h1 class="panel-heading">Measuring Crowd Engagement during Ad-Hoc Events</h1>
 		</div>
 	</div>
 
 
-	<div id="row1" class="row">
+	<div id="row2" class="row">
 		<div id="event-border" class="col-xs-12 col-md-4 panel panel-info">
 			<h1 id="event-h1" class="panel-heading">Event 1</h1>
 			<div class="panel-body">
@@ -163,7 +155,7 @@
 		</div>
 	</div>
 
-		<div id="row2" class="row">
+		<div id="row3" class="row">
 			<div id="satisfaction-border" class="col-xs-12 col-md-12  panel panel-info">
 				<h1 id="satisfaction-h1" class="panel-heading">Satisfaction</h1>
 				<h2 class="panel-body">Number</h2>
@@ -174,7 +166,7 @@
 		</div>
 	</div>
 
-	<div id="row3" class="row">
+	<div id="row4" class="row">
 		</div>	
 		<div id="number-border" class="col-xs-12 col-sm-6 col-md-12 panel panel-info">
 			<h1 id="number-h1" class="panel-heading">Number of People</h1>
@@ -184,18 +176,18 @@
 	</div>
 </div>
 <div class="container-fluid">
-	<div id="row4" class="row">
-		<div id="interaction-border" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 panel panel-info">
+	<div id="row5" class="row">
+		<!-- <div id="interaction-border" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 panel panel-info">
 			<h1 id="interaction-h1" class="panel-heading">Interaction</h1>
 			<h2 class="panel-body">Highest Sound Level:</h2>
 			<h3 class="panel-body" id="sound-h3">800 dB</h3>
 			<h2 class="panel-body">Average Sound Level:</h2>
 			<h3 class="panel-body" id="ajax-sound">300 dB</h3>
-		</div>
-		<div id="ajax-motion" class="col-xs-12 col-lg-6 panel panel-info">
+		</div> -->
+		<div id="ajax-motion" class="col-xs-12 col-lg-12 panel panel-info">
 			<h1 class="panel-heading">Human Traffic</h1>
 			<h2 class="panel-body" id="motion-h2">Motion Present:</h2>
-			<div id="display-motion" class="panel panel-info col-xs-12 col-md-6">
+			<div id="display-motion" class="panel panel-info col-xs-12 col-md-12">
 				<canvas id="chart-motion" class="panel-body" width="400" height="400"></canvas>
 			</div>
 		</div>

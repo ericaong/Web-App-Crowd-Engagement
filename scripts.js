@@ -40,7 +40,7 @@ $(function() {
 	        }
 	    }
 	});
-	
+
 	let ctx2 = $("#chart-motion");
 
 	let myChart2 = new Chart(ctx2, {
@@ -63,7 +63,28 @@ $(function() {
 			}
 		}
 	});
-	
+	//This is for my motion sensor with Datastream id of 990584
+	//Posting on myChart2
+	let previousTimeForChart2;
+
+	$.get(BASE_URL + '/Datastreams(990584)/Observations'
+		+ '?' + '$orderby=phenomenonTime' + '&' 
+		+ '$select=phenomenonTime', function(response, status) {
+			previousTimeForChart2 = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
+
+			if (time === previousTimeForChart4) {
+				//do nothing
+				console.log('They are equal')
+			} else {
+				addData(myChart2, time, response.value[0].result);
+				myChart2.update()
+				previousTimeForChart2 = time;
+			}
+
+		})
+
+	//This is for motion sensor with Datastream id of 990584
+	//Posting
 	setInterval(function() {
 		$.get(BASE_URL + '/Datastreams(990584)/Observations' 
 			+ '?' + '$orderby=phenomenonTime' + '&'
@@ -73,6 +94,18 @@ $(function() {
 				myChart2.update()
 		});
 	}, 3000);
+
+	setInterval(function() {
+		$.get(BASE_URL + '/Datastreams(990584)/Observations' 
+			+ '?' + '$orderby=phenomenonTime' + '&'
+			+ '$select=result, phenomenonTime', function(response, status) {
+				let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
+				addData(myChart1, time, response.value[0].result);
+				myChart1.update()
+		});
+	}, 3000);
+
+
 
 	function addData(chart, label, data) {
 	    chart.data.labels.push(label);
@@ -88,6 +121,13 @@ $(function() {
 	        dataset.data.pop();
 	    });
 	    chart.update();
+
+	$('#search-button')..on('click', function(e) {
+		e.preventDefault();
+		let text = $('#search-bar').val();
+		console.log(text);
+
+	}
 }
 
 
