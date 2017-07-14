@@ -70,9 +70,10 @@ $(function() {
 	$.get(BASE_URL + '/Datastreams(990584)/Observations'
 		+ '?' + '$orderby=phenomenonTime' + '&' 
 		+ '$select=phenomenonTime', function(response, status) {
+			let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
 			previousTimeForChart2 = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
 
-			if (time === previousTimeForChart4) {
+			if (time === previousTimeForChart2) {
 				//do nothing
 				console.log('They are equal')
 			} else {
@@ -95,15 +96,15 @@ $(function() {
 		});
 	}, 3000);
 
-	setInterval(function() {
-		$.get(BASE_URL + '/Datastreams(990584)/Observations' 
-			+ '?' + '$orderby=phenomenonTime' + '&'
-			+ '$select=result, phenomenonTime', function(response, status) {
-				let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
-				addData(myChart1, time, response.value[0].result);
-				myChart1.update()
-		});
-	}, 3000);
+	// setInterval(function() {
+	// 	$.get(BASE_URL + '/Datastreams(990584)/Observations' 
+	// 		+ '?' + '$orderby=phenomenonTime' + '&'
+	// 		+ '$select=result, phenomenonTime', function(response, status) {
+	// 			let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
+	// 			addData(myChart1, time, response.value[0].result);
+	// 			myChart1.update()
+	// 	});
+	// }, 3000);
 
 
 
@@ -122,35 +123,36 @@ $(function() {
 	    });
 	    chart.update();
 
-	$('#search-button')..on('click', function(e) {
-		e.preventDefault();
-		let text = $('#search-bar').val();
-		console.log(text);
-
 	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

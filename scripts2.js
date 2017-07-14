@@ -217,9 +217,11 @@ $(function() {
 	$.get(BASE_URL + '/Datastreams(990578)/Observations'
 		+ '?' + '$orderby=phenomenonTime' + '&' 
 		+ '$select=phenomenonTime', function(response, status) {
+			let time = (new Date(response.value[0].phenomenonTime));
 			previousTimeForChart3 = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
 
-			if (time === previousTimeForChart4) {
+
+			if (time === previousTimeForChart3) {
 				//do nothing
 				console.log('They are equal')
 			} else {
@@ -239,18 +241,19 @@ $(function() {
 
 				// This part is for line graphs
 				let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
+		
 				// time.toLocaleTimeString()
 
 				addData(myChart3, time, response.value[0].result);
 				myChart3.update();
 
-				if (time === previousTimeForChart4) {
+				if (time === previousTimeForChart3) {
 				//do nothing
 				console.log('They are equal')
 			} else {
-				addData(myChart4, time, response.value[0].result);
-				myChart4.update()
-				previousTimeForChart4 = time;
+				addData(myChart3, time, response.value[0].result);
+				myChart3.update()
+				previousTimeForChart3 = time;
 			}
 
 		});
@@ -269,39 +272,6 @@ $(function() {
 		});
 	}, 3000);
 
-	//This is for sound sensor with Datastream id of 990590
-	// Posting on myChart4
-	// let previousTimeForChart4;
-
-	// $.get(BASE_URL + '/Datastreams(990590)/Observations'
-	// 	+ '?' + '$orderby=phenomenonTime' + '&' 
-	// 	+ '$select=phenomenonTime', function(response, status) {
-	// 		previousTimeForChart4 = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
-
-			
-	// 	})
-
-
-
-	// setInterval(function() {
-	// 	$.get(BASE_URL + '/Datastreams(990590)/Observations' 
-	// 		+ '?' + '$orderby=phenomenonTime' + '&'
-	// 		+ '$select=result, phenomenonTime', function(response, status) {
-	// 			let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
-	// 			addData(myChart4, time, response.value[0].result);
-	// 			myChart4.update()
-
-	// 			if (time === previousTimeForChart4) {
-	// 			//do nothing
-	// 			console.log('They are equal')
-	// 		} else {
-	// 			addData(myChart4, time, response.value[0].result);
-	// 			myChart4.update()
-	// 			previousTimeForChart4 = time;
-	// 		}
-
-	// 	});
-	// }, 3000);
 
 	// This is for motion sensor with Datastream id of 990584
 	// Posting on myChart2
@@ -310,9 +280,10 @@ $(function() {
 	$.get(BASE_URL + '/Datastreams(990584)/Observations'
 		+ '?' + '$orderby=phenomenonTime' + '&' 
 		+ '$select=phenomenonTime', function(response, status) {
+			let time = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
 			previousTimeForChart2 = (new Date(response.value[0].phenomenonTime)).toLocaleTimeString();
 
-			if (time === previousTimeForChart4) {
+			if (time === previousTimeForChart2) {
 				//do nothing
 				console.log('They are equal')
 			} else {
@@ -331,13 +302,13 @@ $(function() {
 				addData(myChart2, time, response.value[0].result);
 				myChart2.update()
 
-				if (time === previousTimeForChart4) {
+				if (time === previousTimeForChart2) {
 				//do nothing
 				console.log('They are equal')
 			} else {
-				addData(myChart4, time, response.value[0].result);
-				myChart4.update()
-				previousTimeForChart4 = time;
+				addData(myChart2, time, response.value[0].result);
+				myChart2.update()
+				previousTimeForChart2 = time;
 			}
 
 		});
@@ -357,8 +328,6 @@ $(function() {
 	        dataset.data.pop();
 	    });
 	    chart.update();
-
-
 }
 
 
@@ -373,15 +342,22 @@ $(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
