@@ -1,0 +1,32 @@
+#background-color {
+	background: #e1bee7;
+	background: -webkit-linear-gradient(#e1bee7, #f8bbd0, #ffccbc);
+	background: -o-linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+	background: -moz-linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+	background: linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+;
+}
+
+#progress-ligr {
+	background-color: #00e676
+}
+
+#progress-yell {
+	background-color: #f0ff00;
+}
+
+/*#third-row {
+	padding: 0px 10px;
+}*/
+
+#new-events {
+	padding-bottom: 123.5px;
+}
+
+.label {
+	background-color: #00e676;
+}
+
+.label-yellow {
+	background-color: #f0ff00;
+}

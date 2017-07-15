@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Event 1</title>
+	<title>Event 2</title>
 	<link rel="icon" href="people icon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="people icon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles-event-2.css">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -34,7 +34,7 @@
 		       		<span class="caret"></span></a>
 		        	<ul class="dropdown-menu">
 		          		<li><a href="./index.html">Event 1</a></li>
-		          		<li><a href="./index-event-2.html">Event 2</a></li>
+		          		<li><a href="#">Event 2</a></li>
 		        		<li><a href="#">Event 3</a></li>
 		        	</ul>
 		        </li>
@@ -122,11 +122,11 @@
 
 	<div id="row2" class="row">
 		<div id="event-border" class="col-xs-12 col-md-4 panel panel-info">
-			<h1 id="event-h1" class="panel-heading">Event 1</h1>
+			<h1 id="event-h1" class="panel-heading">Event 2</h1>
 			<div class="panel-body">
 				<h2>Overall Engagement</h2>
 				<div class="progress">
-					<div id="progress-ligr" class="progress-bar progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" ariavaluemin="0" aria-valuemax="100" style="width: 75%"> Good 75%
+					<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="75" ariavaluemin="0" aria-valuemax="100" style="width: 32%"> Poor 32%
 					</div>
 				</div>
 			</div>
@@ -143,7 +143,7 @@
 		<div id="dwell-border ajax-ultrasonic" class="col-xs-12 col-md-4 panel panel-info">
 			<h1 id="dwell-h1" class="panel-heading">Dwell Time</h1>
 			<h2 class="panel-body">Average (seconds): </h2>
-			<h3 class="panel-body dwellUpdatable" id="dwell-h3"></h3>
+			<h3 class="panel-body dwellUpdatable" id="dwell-h3">5</h3>
 		</div>
 	</div>
 
@@ -151,8 +151,8 @@
 			<div id="satisfaction-border" class="col-xs-12 col-md-12  panel panel-info">
 				<h1 id="satisfaction-h1" class="panel-heading">Satisfaction</h1>
 				<h2 class="panel-body">Number of Votes</h2>
-				<div id="display-satisfaction" class="panel-body">
-					<canvas id="chart-satisfaction" width='400' height='400' class="panel-body"></canvas>
+				<div id="display-fake2" class="panel-body">
+					<canvas id="chart-fake" width='400' height='400' class="panel-body"></canvas>
 				</div>
 			</div>
 		</div>
@@ -163,7 +163,7 @@
 		<div id="number-border" class="col-xs-12 col-sm-6 col-md-12 panel panel-info">
 			<h1 id="number-h1" class="panel-heading">Number of People</h1>
 			<h2 class="panel-body">Footfall Count:</h2>
-			<h3 id="footfall-h3 ajax-vibration" class="panel-body footfallUpdatable"></h3>
+			<h3 id="footfall-h3 ajax-vibration" class="panel-body footfallUpdatable">3</h3>
 		</div>
 	</div>
 </div>
@@ -172,7 +172,7 @@
 		<div id="ajax-motion" class="col-xs-12 col-lg-12 panel panel-info">
 			<h1 class="panel-heading">Human Traffic</h1>
 			<h2 class="panel-body" id="motion-h2">Rate of Motion:</h2>
-			<h3 id="motion-h3 ajax-motion" class="panel-body motionUpdatable"></h3>
+			<h3 id="motion-h3 ajax-motion" class="panel-body motionUpdatable">9</h3>
 			<!-- <div id="display-motion" class="panel panel-info col-xs-12 col-md-12">
 				<canvas id="chart-motion" class="panel-body" width='400' height='400'></canvas>
 			</div> -->
@@ -189,7 +189,7 @@
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
-<script src="scripts.js"></script>
+<script src="scripts-event-2.js"></script>
 
 	
 </body>

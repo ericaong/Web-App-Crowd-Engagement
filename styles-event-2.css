@@ -1,0 +1,20 @@
+#background-color {
+	background: #e1bee7;
+	background: -webkit-linear-gradient(#e1bee7, #f8bbd0, #ffccbc);
+	background: -o-linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+	background: -moz-linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+	background: linear-gradient(#e1bee7, #f8bbd0, #ffccbc); 
+;
+}
+
+.label {
+	background-color: #00e676;
+}
+
+.label-yellow {
+	background-color: #f0ff00;
+}
+
+#block {
+	padding: 37px;
+}

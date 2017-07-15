@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>All Charts</title>
+	<title>Home Page</title>
 	<link rel="icon" href="people icon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="people icon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles3.css">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -23,21 +23,23 @@
     			<span class="icon-bar"></span>
     			<span class="icon-bar"></span>
     		</button>
-      		<a class="navbar-brand" href="./index3.html">Crowd Engagement</a>
+      		<a class="navbar-brand" href="./index3.html">Crowd 
+      		Engagement</a>
     	</div>
     	<div class="collapse navbar-collapse" id="navibar">
 	    	<ul class="nav navbar-nav">
 	      		<li class="active"><a href="./index3.html">Home</a></li>
-		    	<li class="dropdown">
+		        <li class="dropdown">
 		     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Events
 		       		<span class="caret"></span></a>
 		        	<ul class="dropdown-menu">
 		          		<li><a href="./index.html">Event 1</a></li>
-		          		<li><a href="#">Event 2</a></li>
+		          		<li><a href="./index-event-2.html">Event 2</a></li>
 		        		<li><a href="#">Event 3</a></li>
 		        	</ul>
 		        </li>
 	    	</ul>
+	    		
 	    	<!-- <form class="navbar-form navbar-left">
 	    		<div class="input-group">
 	    			<input type="text" id="search-bar" class="form-control" placeholder="Search">
@@ -49,66 +51,63 @@
 
   	</div>
 </nav>
-	
+
 <div class="container-fluid">
-	<div class="row" id="rowA">
-		<div class="panel panel-info col-xs-12 col-md-12">
-			<h1 class="panel-heading">Satisfaction</h1>
-				<div id="display-satisfaction" class="panel-body">
-					<canvas id="chart-satisfaction" width="400" height="400" class="panel-body"></canvas>
-				</div>
+	<div id="first-row" class="row">
+		<div class="panel panel-info">
+			<h1 class="panel-heading">Measuring Crowd Engagement during Ad-Hoc Events</h1>
 		</div>
 	</div>
-	<div class="row" id="rowB">
-		<div class="panel panel-info col-xs-12 col-md-12" id="dwell-panel">
-			<h1 class="panel-heading">Dwell Time</h1>
-			
-			<div id="display-dwell ajax-dwell" class="col-xs-12 col-md-6 panel-body">
-				<canvas id="chart-dwell" class="panel-body" width="400" height="400"></canvas>
-			</div>
-		</div>
-	</div>	
-	<div class="row" id="rowC">	
-		<div class="col-xs-12 col-md-12 panel panel-info">
-			<h1 id="number-h1" class="panel-heading">Number of People</h1>
-			<h2 class="panel-body">Footfall Count:</h2>
-			<h3 id="footfall-h3" class="panel-body">185</h3>
-				<div id="display-peoplenum ajax-vibration">
-					<canvas id="chart-peoplenum" class="panel-body" width="400" height="400"></canvas>
-				</div>
-		</div>
+	<div id="second-row" class="row">
+		<h1><u><center>Current Events</center></u></h1>
 	</div>
-	<div class="row" id="rowD">
-		<div class="col-xs-12 col-md-12 panel panel-info">
-			<h1 class="panel-heading">Human Traffic</h1>
-				<div id="display-motion" class="panel panel-info col-xs-12 col-md-6">
-					<canvas id="chart-motion" class="panel-body" width="400" height="400"></canvas>
-				</div>
-				<h4 class="panel-body">Motion Present = 1</h4>
-				<h4 class="panel-body">Motion Absent = 0</h4>
-			</div>
-	</div>
-	<!-- <div class="row" id="rowE"></div>
-		<div class="col-xs-12 col-md-12 panel panel-info">
-			<h1 class="panel-heading">Interaction</h1>
-			<div id="display-sound">
-				<canvas id="chart-sound" class="panel-body" width="400" height="400"></canvas>
-			</div>
-		</div>
-	</div> -->
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="container-fluid">
+	<div id="third-row" class="row-fluid"></div>
+		<a href="index.html">
+			<div class="panel panel-info col-xs-12 col-md-6">
+				<h1 id="event-h1" class="panel-heading">Event 1</h1>
+					<div class="panel-body">
+						<h2>Overall Engagement</h2>
+						<div class="progress">
+							<div id="progress-ligr" class="progress-bar progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" ariavaluemin="0" aria-valuemax="100" style="width: 75%"> Good 75%
+							</div>
+						</div>
+					</div>
+			</div>
+		</a>
+		<a href="index-event-2.html">
+			<div class="panel panel-info col-xs-12 col-md-6">			
+				<h1 id="event-h2" class="panel-heading">Event 2</h1>
+					<div class="panel-body">
+						<h2>Overall Engagement</h2>
+						<div class="progress">
+							<div id="progress-orange" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="75" ariavaluemin="0" aria-valuemax="100" style="width: 32%"> Poor 32%
+							</div>
+						</div>
+					</div>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="container-fluid">
+	<div id="fourth-row" class="row-fluid">
+		<div class="panel panel-info col-xs-12 col-md-6">
+			<h1 id="event-h3" class="panel-heading">Event 3</h1>
+				<div class="panel-body">
+					<h2>Overall Engagement</h2>
+					<div class="progress">
+						<div id="progress-yell" class="progress-bar progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="75" ariavaluemin="0" aria-valuemax="100" style="width: 55%"> Satisfactory 55%
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="panel panel-info col-xs-12 col-md-6" id="new-events">
+			<h1 class="panel-body">+ New Event</h1>
+		</div>
+	</div>
+</div>
+	
 
 
 
@@ -118,7 +117,6 @@
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
-<script src="scripts2.js"></script>
-
+<script src="scripts3.js"></script>
 </body>
 </html>

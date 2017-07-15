@@ -1,35 +1,20 @@
 $(function() {
-	let BASE_URL = "http://scratchpad.sensorup.com/OGCSensorThings/v1.0";
+	let BASE_URL = "http://cxa17-school15.sensorup.com/v1.0";
 
-	// $('#ajax-ultrasonic').on('click', function() {
-	// 	$.get(BASE_URL + '/Datastreams(990578)/Observations' 
-	// 		+ '?' + '$orderby=phenomenonTime' + '&'
-	// 		+ '$select=result', function(response, status) {
-	// 			console.log(Number(response.value[0].result));
-	// 			$('#dwell-h3').html(response.value[0].result);
-	// 	});
-	// });
-	
+	$.ajax({
+		url : BASE_URL + '/Datastreams(6)' + '/Observations?'
+			+ '$top=1000' + '&' + '$skip=0',
+		method : "GET",
+		crossDomain : true,
+		success: function(data, status, jqXHR) {
+			console.log(data + 'success!')
 
-	// $('#ajax-vibration').on('click', function() {
-	// 	$.get(BASE_URL + '/Datastreams(990587)/Observations' 
-	// 		+ '?' + '$orderby=phenomenonTime' + '&'
-	// 		+ '$select=result', function(response, status) {
-	// 			console.log(Number(response.value[0].result));
-	// 			$('#footfall-h3').html(response.value[0].result);
-	// 	});
-	// });
+		},
+		error : function(jqXHR, status, error) {
+			console.log(error)
+		}
+	})
 	
-	// $('#ajax-sound').on('click', function() {
-	// 	$.get(BASE_URL + '/Datastreams(990590)/Observations' 
-	// 		+ '?' + '$orderby=phenomenonTime' + '&'
-	// 		+ '$select=result', function(response, status) {
-	// 			console.log(Number(response);
-	// 			$('#sound-h3').html(response.value[0].result);
-	// 	});
-	// });
-	
-
 	// $('#ajax-motion').on('click', function() {
 	// 	$.get(BASE_URL + '/Datastreams(990584)/Observations' 
 	// 		+ '?' + '$orderby=phenomenonTime' + '&'
@@ -46,6 +31,7 @@ $(function() {
 	    data: {
 	        labels: ["Likes", "Dislikes"],
 	        datasets: [{
+	        	responsive: true,
 	            label: 'Number of Votes',
 	            data: [19, 5],
 	            backgroundColor: [
@@ -78,6 +64,7 @@ $(function() {
 		data: {
 			labels: [],
 			datasets: [{
+				responsive: true,
 				data: [0, 1],
 				backgroundColor: 'rgba(0, 0, 0, 0)',
 				borderColor: 'rgba(54, 162, 235, 1)',
@@ -101,6 +88,7 @@ $(function() {
 		data: {
 			labels: [],
 			datasets: [{
+				responsive: true,
 				data: [],
 				backgroundColor: 'rgba(0, 0, 0, 0)',
 				borderColor: 'rgba(54, 162, 235, 1)',
@@ -147,6 +135,7 @@ $(function() {
 	    data: {
 	        labels: ["Number of People"],
 	        datasets: [{
+	        	responsive: true,
 	            label: 'Number of People',
 	            data: [0],
 	            backgroundColor: [
@@ -250,11 +239,11 @@ $(function() {
 				if (time === previousTimeForChart3) {
 				//do nothing
 				console.log('They are equal')
-			} else {
-				addData(myChart3, time, response.value[0].result);
-				myChart3.update()
-				previousTimeForChart3 = time;
-			}
+				} else {
+					addData(myChart3, time, response.value[0].result);
+					myChart3.update()
+					previousTimeForChart3 = time;
+				}
 
 		});
 	}, 3000);
@@ -305,11 +294,11 @@ $(function() {
 				if (time === previousTimeForChart2) {
 				//do nothing
 				console.log('They are equal')
-			} else {
-				addData(myChart2, time, response.value[0].result);
-				myChart2.update()
-				previousTimeForChart2 = time;
-			}
+				} else {
+					addData(myChart2, time, response.value[0].result);
+					myChart2.update()
+					previousTimeForChart2 = time;
+				}
 
 		});
 	}, 3000);
